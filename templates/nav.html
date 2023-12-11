@@ -7,7 +7,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           
           <li class="nav-item">
-            <a class="nav-link" href="#">Shop</a>
+            <a class="nav-link" href="{% url 'shop:allProdCat' %}">Shop</a>
           </li>
           <li class="nav-item dropdown {% if 'shop' in request.path %} active {% endif %}">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -21,9 +21,14 @@
              
             </ul>
           </li>
+          
+          {% if item_count > 0 %}
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+            <a class="nav-link" href="{% url 'cart:cart_detail' %}"><i class="fa-solid fa-cart-shopping"></i> ({{item_count}})</a>
           </li>
+          {% endif %}
+            
+          
         </ul>
         <form class="d-flex" role="search" action="{% url 'search_app:SearchResult' %}" method="get">
           {% csrf_token %}
