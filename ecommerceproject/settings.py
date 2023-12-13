@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'credentials',
     'cart',
     'search_app',
     'shop',
@@ -72,6 +73,11 @@ TEMPLATES = [
         },
     },
 ]
+
+# AUTHENTICATION_BACKENDS = [
+#     'django.contrib.auth.backends.ModelBackend',
+# ]
+
 
 WSGI_APPLICATION = 'ecommerceproject.wsgi.application'
 
