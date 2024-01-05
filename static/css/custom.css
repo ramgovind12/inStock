@@ -17,6 +17,9 @@ body{
 .my_footer{
     background-color: #f8f9fa;
     height: 60px;
+    bottom: 0;
+    position: fixed;
+    width: 90%;
 }
 
 .my_footer p{

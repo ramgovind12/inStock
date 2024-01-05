@@ -59,15 +59,16 @@
                 
                 {% for product in products.object_list %}
                     <div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-lg-4">
-                        <div class="card text-center" style="min-width: 18rem;">
-                            <a href="{{product.get_url}}"><img class="card-img-top my_image" src="{{product.image.url}}" alt="{{product.name}}" width="250px" height="250px"></a>
-                            <div class="card-body">
+                        <div class="card text-center" style="width: 18rem; height: 25rem">
+                            <a href="{{product.get_url}}"><img class="card-img-top my_image" src="{{product.image.url}}" alt="{{product.name}}" width="250px" height="300px"></a>
+                            <div class="card-body" >
                                 <h4>{{product.name}} </h4>
                                 <p>₹ {{product.price}} </p>
                             </div>
                         </div>
-                        
+                        <br>
                     </div>
+                    
                 {% endfor %}
                     
             </div>
